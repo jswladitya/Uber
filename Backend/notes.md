@@ -17,3 +17,13 @@
 
 - creting logout routes & Coding the logout controller
     - first we need to create the model blackListToken to auto delete in 24 hr from the DB document when user clicks on the logout button
+
+# Day 3
+- Creating Captain Functionality (same as user)    
+    - setting up captain model , new controller & routes for captain && configuring it into app.js
+    - making same kind of service like user service but this one will be for captain for creating the captain in DB
+        - coding the register captain controller
+        - creating getProfile routes & Coding the get captain profile controller
+        - before that coding the auth middleware first
+    - putting the middleware before the controller, so that u can authenticate the captain before get its user profile
+    - creting logout routes & Coding the logout controller (same as users)
