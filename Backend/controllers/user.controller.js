@@ -62,17 +62,16 @@ module.exports.loginUser = async (req, res, next) => {
 }
 
 module.exports.getUserProfile = async (req, res, next) => {
-
     res.status(200).json(req.user);
-
 }
 
 module.exports.logoutUser = async (req, res, next) => {
+
     res.clearCookie('token');
     const token = req.cookies.token || req.headers.authorization.split(' ')[ 1 ];
 
     await blackListTokenModel.create({ token });
-
+    //it is done here , we need to update our auth middleware to check if the token is blacklisted or not
     res.status(200).json({ message: 'Logged out' });
 
 }

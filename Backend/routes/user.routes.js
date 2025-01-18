@@ -4,7 +4,7 @@ const { body } = require("express-validator")
 const userController = require('../controllers/user.controller');
 const authMiddleware = require('../middlewares/auth.middleware');
 
-//when user register , before saving it to the db sequence of middlewares will run like validate , hash password
+//when user register , before saving it to the db sequence of middlewares will run like validate , hash password on incoming data from the frontend
 router.post('/register', [
     body('email').isEmail().withMessage('Invalid Email'),
     body('fullname.firstname').isLength({ min: 3 }).withMessage('First name must be at least 3 characters long'),
