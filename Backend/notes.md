@@ -27,3 +27,14 @@
         - before that coding the auth middleware first
     - putting the middleware before the controller, so that u can authenticate the captain before get its user profile
     - creting logout routes & Coding the logout controller (same as users)
+
+
+## Frontend : creating user and captain forms
+- creating pages , installing react-router-dom & wrap then app component with browser router   
+- creating routes in App.jsx 
+- MAKING 
+    - initial launch page (to goes to login)
+    - user login page & captain login page
+    - user signup, captain signup
+    - using context API to centralize data
+        - created userContext.ksx -> wrap the app compenent with the userContext as a top of browserRouter
