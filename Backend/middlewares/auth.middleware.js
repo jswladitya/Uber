@@ -7,7 +7,7 @@ const captainModel = require('../models/captain.model');
 //to authenticate user , we need to check if user is already exists or not 
 module.exports.authUser = async(req, res) => {
     // header ya cookie dono me se kahi se bhi token mil gaye to le aao
-    const token = req.cookie.token || req.headers.authorization?.split('')[1];
+    const token = req.cookies.token || req.headers.authorization?.split('')[1];
 
     if(!token){
         return res.status(401).json({message:"Unauthorized"})
